@@ -6,8 +6,22 @@
     
     <%- include('./partials/nav.ejs') %>
 
-    <div class="About content">
-        <h2>This is donation webpage</h2>
+    <div class="Donation">
+        <form action="/donation" method="post">
+            <label for="">Food In Kg</label>
+            <input type="text" name="AmountOfFood" id="">
+
+            <label for="">Location</label>
+            <input type="text" name="location" id="">
+
+            <label for="">Date</label>
+            <input type="text" name="date" id="">
+
+            <label for="">Your Phone Number</label>
+            <input type="text" name="phoneNumber" id="">
+
+            <button>Donate</button>
+        </form>
     </div>
 
     <%- include('./partials/footer.ejs') %>

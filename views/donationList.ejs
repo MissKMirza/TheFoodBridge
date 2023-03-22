@@ -1,0 +1,26 @@
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="Donation-list">
+        <h2>Donaitons available</h2>
+
+        <% if(Donations.length > 0 ) { %>
+            <% Donations.forEach(donation => {  %>
+                <a class="single" href="#/Donation/<%= donation._id %>" >
+                    <h3 class="AmountOfFood"><%= donation.AmountOfFood %></h3>
+                    <p class="date"><%= donation.date %></p>
+                </a>
+            <% }) %>
+        <% } else {%>
+            <p>There are no donations to display</p>
+        <% } %>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

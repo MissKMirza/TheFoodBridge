@@ -7,7 +7,8 @@
     <%- include('./partials/nav.ejs') %>
 
     <div class="RegisterForm">
-        <form action="/register" method="post">
+        <h4>User</h4>
+        <form action="/registerUser" method="post">
             <label for="">Email</label>
             <input type="text" name="email">
             <label for="">Name</label>
@@ -16,6 +17,22 @@
             <input type="text" name="password">
             <button>Register</button>
         </form>
+        
+        <br>
+
+        <h4>Organization</h4>
+        <form action="/registerOrg" method="post">
+            <label for="">Email</label>
+            <input type="text" name="email" placeholder="email">
+            <label for="">OrgName</label>
+            <input type="text" name="orgName" placeholder="Org Name">
+            <label for="">Password</label>
+            <input type="text" name="password" placeholder="password">
+            <label for="">Location</label>
+            <input type="text" name="location" placeholder="Org location" id="">
+            <button>Register</button>
+        </form>
+
     </div>
     <h6>Have an account? <a href="/login">Login Here</a></h6>
 

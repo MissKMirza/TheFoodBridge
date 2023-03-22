@@ -2,6 +2,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 const User = require('./models/User') 
+const Donation = require('./models/Donation') 
+const Org = require('./models/Org') 
 
 const app = express()
 
@@ -31,6 +33,29 @@ app.get('/donate', (req, res) => {
     res.render( 'donate', { title: 'Donate'} )
 })
 
+app.post('/donation', (req, res) => {
+    const donate = new Donation(req.body)
+    donate.save()
+        .then((result) => {
+            res.redirect('/')
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+})
+
+app.get('/donationList', (req, res) => {
+    Donation.find()
+        .then((result)=>{
+
+            res.render('donationList', {title: 'List', Donations: result})
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+})
+
+
 app.get('/login', (req, res) => {
     res.render( 'login', { title: 'login'})
 })
@@ -58,7 +83,7 @@ app.get('/register', (req, res) => {
     res.render( 'register', { title: 'register'})
 })
 
-app.post('/register', (req, res) => {
+app.post('/registerUser', (req, res) => {
     const user = new User(req.body)
     user.save()
         .then((result) => {
@@ -69,6 +94,16 @@ app.post('/register', (req, res) => {
         })
 })
 
+app.post('/registerOrg', (req, res) => {
+    const org = new Org(req.body)
+    org.save()
+        .then((result) => {
+            res.redirect('/')
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+})
 
 app.use((req, res) => {
     res.status(404).render('404', { title: '404'})
