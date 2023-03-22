@@ -37,7 +37,13 @@ app.post('/donation', (req, res) => {
     const donate = new Donation(req.body)
     donate.save()
         .then((result) => {
-            res.redirect('/')
+            Org.find({location: req.body.location})
+                .then((result2) => {
+                    result2.forEach(remailo => {
+                        console.log('Sending message to following emails', remailo.email)
+                    });
+                    res.redirect('/donationList')
+                })
         })
         .catch((err) => {
             console.log(err)
