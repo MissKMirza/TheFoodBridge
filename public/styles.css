@@ -229,3 +229,192 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
+
+
+
+
+
+.history-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1px;
+}
+
+.history-header {
+  margin-bottom: 20px;
+  color: #562C04;
+}
+
+.history-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #562C04;
+  border-radius: 100px;
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.history-box p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+
+
+
+
+.image-text {
+  padding: 100px 0;
+}
+
+.mcontainer {
+  display: flex;
+  align-items: center;
+}
+
+.image-box {
+  flex: 0.7;
+  margin-right: 30px;
+}
+
+.text-box {
+  flex: 1;
+}
+
+.section-text {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.myimg {
+  margin-left: 60px;
+}
+
+
+
+
+
+
+
+ssection {
+  background-color: #fff;
+  padding: 50px 0;
+}
+
+.newcontainer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.newsection-heading {
+  font-size: 36px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  text-align: left;
+  color: #4b3325;
+}
+
+.newsubsection-heading {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  text-align: left;
+  color: #4b3325;
+}
+
+.newsection-text {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.newbullet-list {
+  list-style: disc;
+  margin-left: 30px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+
+
+
+
+
+footer {
+  background-color: #D8CCA1;
+  color: #562C04;
+  padding: 50px 0;
+}
+
+.container-footer {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.row-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-footer {
+  flex-basis: 20.33%;
+  padding: 0 15px;
+}
+
+.col-left {
+  text-align: left;
+}
+
+.col-center {
+  text-align: center;
+}
+
+.col-right {
+  text-align: right;
+}
+
+.logo-footer img {
+  max-width: 100px;
+  margin-bottom: 1px;
+}
+
+.logo-footer p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.copy-footer {
+  text-align: center;
+  margin-top: 30px;
+}
