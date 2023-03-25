@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - A Pen by Vinyas Hegde</title>
-  <link rel="stylesheet" href="./sign.css">
 
+<%- include('./partials/head.ejs') %>
+<head>
+  <link rel="stylesheet" href="./sign.css">
 </head>
 <body>
 <!-- partial:index.partial.html -->
+<%- include('./partials/nav.ejs') %>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
 <div class="parent">
-  <div class="header">
+  <!-- <div class="header">
     <div class="navbar">
       <a href="./index.html">Home</a>
       <a href="#">Services</a>
@@ -19,7 +17,7 @@
       <a href="./sign.html">Sign in</a>
       <div class="profile-icon"><img src="https://cdn.discordapp.com/attachments/1086598800191275069/1086667073138216960/Rectangle_47.png" alt="Girl in a jacket" width="500" height="600"></div>
     </div>
-  </div>
+  </div> -->
   <div class="div2">
     <div class="scontainer" id="container">
       <div class="form-scontainer sign-up-scontainer">
@@ -31,13 +29,13 @@
             <a href="#" class="social aa"><i class="fab fa-linkedin-in"></i></a>
           </div>
           <span class="spann">or use your email for registration</span>
-          <input name="name" type="text" placeholder="Name" />
+          <input name="username" type="text" placeholder="Name" />
           <input name="email" type="email" placeholder="Email" />
           <input name="password" type="password" placeholder="Password" />
-          <button class="butto">Sign Up</button>
+          <button class="butto">Register Up</button>
         </form>
       </div>
-      <div class="form-scontainer sign-in-scontainer">
+      <div class="form-scontainer sign-in-scontainer" action="/login" method="post">
         <form action="#">
           <h1 class="h11">Sign in</h1>
           <div class="social-scontainer">
