@@ -1,5 +1,5 @@
 # 🍽️ The Food Bridge  
-A full-stack platform connecting food donors with NGOs to reduce food waste and improve food accessibility.
+A platform connecting food donors with NGOs to reduce food waste and improve food accessibility.
 
 ---
 
